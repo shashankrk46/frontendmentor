@@ -41,12 +41,26 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color:var(--white);
+  
   position: relative;
    ;
    
 }
-body::before {
+.bg{
+  background-color:var(--LightGrayishBlue);
+  /* top: 0;
+  left: 0; */
+  width:100%;
+  height: 35%;
+  opacity: 0.6;
+  position: absolute;
+}
+.bg-dark{
+  background-color:var(--DarkDesaturatedBlue) ;
+  opacity: 0.3;
+  
+}
+/* body::before {
   content: "";
   position: absolute;
   background-color:var(--LightGrayishBlue);
@@ -55,7 +69,7 @@ body::before {
   width:100%;
   height: 35%;
   opacity: 0.6;
-}
+} */
 
 .main-bg{
   background-color: var(--VeryDarkBlue);
@@ -111,26 +125,33 @@ z-index: 1;
   height: 28px;
   width: 60px;
   background-color: var(--DarkGrayishBlue);
+  /* background-image: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%)); */
   opacity: 0.5;
   cursor: pointer;
   border-radius: 1rem;
   position: relative;
   margin-left: 20px;
   /* transition: background-color 0.3s ease; */
-  /* z-index: 1; */
+  /* z-index: 10; */
+}
+.switch-dark{
+  background-image: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
 }
 .ball{
   content: "";
   /* margin-left: 2px; */
   top:2px;
-  left:102px;
+  left:103px;
   height: 22px;
   width:22px;
   background-color:var(--White);
   position: absolute;
   border-radius: 50%;
-  /* z-index: -1; */
+  /* z-index: 1; */
   /* transition: transform 0.3s ease; */
+}
+.ball-dark{
+  background-color:var(--VeryDarkBlue);
 }
 .ball-move{
   content: "";
@@ -174,6 +195,9 @@ z-index: 1;
 }  */
 .heading{
   font-size: 30px;
+}
+.heading-dark{
+  color: var(--White);
 }
 .main-heading{
   font-size: 15px;
@@ -299,11 +323,11 @@ border-top:4px solid red;
   background-color:var(--DarkDesaturatedBlue)
 }
 .bottom-card-dark:hover{
-  background-color:hsla(228, 28%, 20%,0.3)
+  background-color:hsla(228, 28%, 20%,0.5)
 }
 .bottom-card:hover{
   
-   background-color:hsla(228, 12%, 44%,0.3);
+   background-color:hsla(228, 12%, 44%,0.2);
    
 }
 
@@ -323,10 +347,13 @@ border-top:4px solid red;
 .left-part p{
 
   font-size: 15px;
-  color: var(--DarkDesaturatedBlue);
+  color: var(--DarkGrayishBlue);
   font-weight: bold;
-opacity: 0.8;
+/* opacity: 0.8; */
   /* margin-bottom:30px; */
+}
+.bottom-para{
+  color: var(--White);
 }
 h3{
   color: black;

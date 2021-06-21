@@ -19,8 +19,10 @@ function moveball(e) {
     darkMode.textContent = "Dark Mode";
     mode.classList.add("switch-dark");
     ball.classList.add("ball-dark");
-    ball.style.transform = "translateX(33px)";
+    ball.style.transform = "translateX(0px)";
     ball.style.transition = "transform 0.5s ease";
+    // ball.style.transform = "translateX(33px)";
+    // ball.style.transition = "transform 0.5s ease";
     document.body.style.backgroundColor = "hsl(230, 17%, 14%)";
     card.forEach(e => {
       e.classList.add("card-dark");
@@ -42,7 +44,8 @@ function moveball(e) {
     darkMode.textContent = "Light Mode";
     mode.classList.remove("switch-dark");
     ball.classList.remove("ball-dark");
-    ball.style.transform = "translateX(0px)";
+
+    ball.style.transform = "translateX(33px)";
     ball.style.transition = "transform 0.5s ease";
     document.body.style.backgroundColor = "hsl(0, 0%, 100%)";
     card.forEach(e => {
@@ -62,3 +65,7 @@ function moveball(e) {
     // mode.style.background = "hsl(228, 12%, 44%)";
   }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  mode.checked = true;
+});
